@@ -11,7 +11,9 @@ public class TrieNode {
     public TrieNode(char c){
         this.c = c;
     }
-
+    public String getC() {
+        return ""+ c;
+    }
     public HashMap<Character, TrieNode> getChildren () {
         return children;
     }
@@ -22,5 +24,7 @@ public class TrieNode {
         this.endOfWord = value;
     }
 
-
+    public String toString(){
+        return "{"+c+", " + endOfWord+"}";
+    }
 }
