@@ -1,1 +1,8 @@
-The design of my code is 
+The design of my code is that it uses TrieNodes that each hold a character and each hold their own hashmap to other characters and other 
+trinodes. By structuring my code like this, it allows me to reach the most optimal time of O(n) in both inserting the words into a wordlist
+and searching for those words. When inserting a word, there is no array so it is very much instant access,and when searching, I use 
+recursion to backtrack and reproduce the words and end up putting them back into a linked list which I then have either print out results or
+compare with expected results. When searching for possible words, because it is in Trinode with hashmaps the amount of total checks reaches O(c*k)
+with c being number of elements and k being length of the words. 
+This is the fastest way, achieving the lowest big O notation, because it strays from arrays and other methods of checks that would other wise
+search an entire word. By structuring my code with trinodes each having a hashmap, it allows me to check far less variables than otherwise.
