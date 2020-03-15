@@ -45,6 +45,9 @@ public class AutoComplete {
         return (LinkedList) finalResults;//placeholder
     }
     private void findAllChildWords(TrieNode n, List<String> results,String word) {
+        if (n==null) {
+            return;
+        }
         if (n.isEndOfWord()) {
             word += n.getC();
             results.add(word);
